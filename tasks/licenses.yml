@@ -1,0 +1,46 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Configure Licenses for common applications
+
+- name: (Licensing) License Rogue Amoeba's Loopback
+  command:
+    cmd: 'defaults write com.rogueamoeba.Loopback registrationInfo -dict-add Code "{{ loopback_license }}" Name "{{ loopback_name }}"'
+    creates: "~/Library/Preferences/com.rogueamoeba.Loopback.plist" # This is a bit of a hack to get around a dumb ansible-lint rule
+
+- name: (Licensing) License Rogue Amoeba's Audio Hijack
+  command:
+    cmd: 'defaults write com.rogueamoeba.audiohijack3 registrationInfo -dict-add Code "{{ audiohijack_license }}" Name "{{ audiohijack_name }}"'
+    creates: "~/Library/Preferences/com.rogueamoeba.audiohijack3.plist" # This is a bit of a hack to get around a dumb ansible-lint rule
+
+- name: (Licensing) License Rogue Amoeba's SoundSource
+  command:
+    cmd: 'defaults write com.rogueamoeba.soundsource registrationInfo -dict-add Code "{{ soundsource_license }}" Name "{{ soundsource_name }}"'
+    creates: "~/Library/Preferences/com.rogueamoeba.soundsource.plist" # This is a bit of a hack to get around a dumb ansible-lint rule
+
+- name: (Licensing) License Rogue Amoeba's Fission
+  command:
+    cmd: 'defaults write com.rogueamoeba.Fission registrationInfo -dict-add Code "{{ fission_license }}" Name "{{ fission_name }}"'
+    creates: "~/Library/Preferences/com.rogueamoeba.Fission.plist" # This is a bit of a hack to get around a dumb ansible-lint rule
+
+- name: (Licensing) License Rogue Amoeba's Farrago
+  command:
+    cmd: 'defaults write com.rogueamoeba.farrago registrationInfo -dict-add Code "{{ farrago_license }}" Name "{{ farrago_name }}"'
+    creates: "~/Library/Preferences/com.rogueamoeba.farrago.plist" # This is a bit of a hack to get around a dumb ansible-lint rule
+
+- name: (Licensing) Apply license key for Viscosity
+  osx_defaults:
+    domain: com.viscosityvpn.Viscosity
+    type: string
+    state: present
+    key: License
+    value: '{{ viscosity_license }}'

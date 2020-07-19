@@ -1,0 +1,56 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Configure and tweak Terminal for the current user
+
+- name: (Terminal) Copy Terminal script to tmp
+  copy:
+    src: files/TermProfile.scpt
+    dest: /tmp/TermProfile.scpt
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0755
+
+- name: (Terminal) Copy Terminal profile to opt
+  become: true
+  become_user: root
+  copy:
+    src: files/DevOps.terminal
+    dest: /opt/Devops.terminal
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0755
+
+- name: Load custom Terminal profile to add it
+  shell:
+    cmd: "osascript /tmp/TermProfile.scpt && rm -rf /tmp/TermProfile.scpt"
+    removes: /tmp/TermProfile.scpt
+
+- name: (Terminal) Pause for 20 seconds to give the Terminal profile a chance to install before setting it as default
+  pause:
+    seconds: 20
+
+- name: (Terminal) Ensure custom Terminal profile is the default window
+  osx_defaults:
+    domain: com.apple.Terminal
+    type: string
+    state: present
+    key: 'Default Window Settings'
+    value: 'Devops'
+
+- name: (Terminal) Ensure custom Terminal profile is the default startup window
+  osx_defaults:
+    domain: com.apple.Terminal
+    type: string
+    state: present
+    key: 'Startup Window Settings'
+    value: 'Devops'

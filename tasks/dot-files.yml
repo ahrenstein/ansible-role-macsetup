@@ -1,0 +1,87 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Deploy my commonly used dot files
+
+- name: (Dot Files) Deploy my custom zsh profile
+  get_url:
+    url: https://raw.githubusercontent.com/ahrenstein/noodling/main/zsh/mac-zshrc
+    dest: "~/.zshrc"
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0644
+
+- name: (Dot Files) Make sure /opt exists
+  become: true
+  become_user: root
+  file:
+    path: '/opt'
+    state: directory
+    owner: root
+    group: wheel
+    mode: 0755
+
+- name: (Dot Files) Deploy my custom git configuration
+  template:
+    src: 'gitconfig.j2'
+    dest: "~/.gitconfig"
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0644
+
+- name: (Dot Files) Deploy my custom csshX settings
+  copy:
+    src: 'csshrc'
+    dest: "~/.csshrc"
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0644
+
+- name: (Dot Files) Deploy my custom ansible config
+  copy:
+    src: 'ansible.cfg'
+    dest: "~/.ansible.cfg"
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0644
+
+- name: (Dot Files) Deploy my custom vimrc
+  copy:
+    src: 'vimrc'
+    dest: "~/.vimrc"
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0644
+
+- name: (Dot Files) Verify gnupg directory exists
+  file:
+    path: '~/.gnupg'
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0700
+
+- name: (Dot Files) Deploy my custom GPG agent config
+  copy:
+    src: 'gpg-agent.conf'
+    dest: "~/.gnupg/gpg-agent.conf"
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0644
+
+- name: (Dot Files) Deploy my custom GPG agent initialization
+  copy:
+    src: 'gpg-agent-info'
+    dest: "~/.gpg-agent-info"
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0644

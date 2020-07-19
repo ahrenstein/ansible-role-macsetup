@@ -1,0 +1,45 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Install Homebrew taps, packages, and casks I commonly use
+
+- name: (Homebrew) Make sure homebrew is up to date
+  homebrew:
+    update_homebrew: yes
+
+- name: Tap my usual custom taps
+  homebrew_tap:
+    name: "{{ homebrew_taps }}"
+    state: present
+
+- name: (Homebrew) Install osxfuse ahead of packages
+  homebrew_cask:
+    name: osxfuse
+    state: present
+    sudo_password: "{{ ansible_become_pass }}"
+
+- name: (Homebrew) Install my usual Homebrew packages
+  homebrew:
+    name: "{{ homebrew_packages }}"
+    state: present
+
+- name: (Homebrew) Install my usual Homebrew casks
+  homebrew_cask:
+    name: "{{ homebrew_casks }}"
+    state: present
+    sudo_password: "{{ ansible_become_pass }}"
+
+- name: (Homebrew) Remove Apple quarantine on all Applications
+  become: yes
+  command:
+    cmd: "xattr -rd com.apple.quarantine /Applications"
+    removes: /tmp/DoesNot.Exist # Hack to deal with stupid ansible linting rule

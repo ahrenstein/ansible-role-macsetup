@@ -1,0 +1,49 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Configure Mission Control with my usual settings
+
+- name: (Mission Control) Don't rearrange spaces based on most recent use
+  osx_defaults:
+    domain: com.apple.dock
+    type: int
+    state: present
+    key: mru-spaces
+    value: 0
+  notify: restart Dock
+
+- name: (Mission Control) Switch to active space for new application windows
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: int
+    state: present
+    key: AppleSpacesSwitchOnActivate
+    value: 1
+  notify: restart Dock
+
+- name: (Mission Control) Don't group windows by application
+  osx_defaults:
+    domain: com.apple.dock
+    type: int
+    state: present
+    key: expose-group-apps
+    value: 0
+  notify: restart Dock
+
+- name: (Mission Control) Separate spaces for displays (REQUIRES LOGOUT)
+  osx_defaults:
+    domain: com.apple.spaces
+    type: bool
+    state: present
+    key: spans-displays
+    value: false
+  notify: restart Dock

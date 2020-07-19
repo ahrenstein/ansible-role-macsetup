@@ -1,0 +1,28 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+galaxy_info:
+  role_name: "mac_setup"
+  author: "Matthew Ahrenstein"
+  description: "Configure a fresh Mac with Matthew Ahrenstein's custom settings"
+  license: "license (MIT)"
+  min_ansible_version: "2.8"
+  platforms:
+    - name: macOS
+      versions:
+        - Catalina
+  galaxy_tags:
+    - macos
+    - devops
+    - setup
+    - tweak
+    - preferences

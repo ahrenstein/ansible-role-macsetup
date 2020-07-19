@@ -1,0 +1,28 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Configure a fresh Mac with Matthew Ahrenstein's custom settings
+
+- import_tasks: homebrew.yml
+- import_tasks: profile.yml
+- import_tasks: dot-files.yml
+- import_tasks: thefuck.yml
+- import_tasks: terminal.yml
+- import_tasks: system-preferences.yml
+- import_tasks: siri.yml
+- import_tasks: magic-trackpad.yml
+- import_tasks: magic-mouse.yml
+- import_tasks: mission-control.yml
+- import_tasks: menu-bar.yml
+- import_tasks: spotlight.yml
+- import_tasks: licenses.yml
+  when: licenses is true

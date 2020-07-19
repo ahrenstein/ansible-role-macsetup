@@ -1,0 +1,185 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Deploy my custom preferences
+
+- name: (System Preferences) Set screen shot path to ~/Scratch
+  osx_defaults:
+    domain: com.apple.screencapture
+    type: string
+    state: present
+    key: location
+    value: "~/Scratch"
+
+- name: (System Preferences) Re-enable holding a key down to repeat the character
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: bool
+    state: present
+    key: ApplePressAndHoldEnabled
+    value: false
+
+- name: (System Preferences) Set keyboard tab to all controls
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: int
+    state: present
+    key: AppleKeyboardUIMode
+    value: 2
+
+- name: (System Preferences) Change Notification Center timeout to 7 seconds
+  osx_defaults:
+    domain: com.apple.notificationcenterui
+    type: string
+    state: present
+    key: bannerTime
+    value: 7
+
+- name: (System Preferences) Disable automatic capitalization
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: bool
+    state: present
+    key: NSAutomaticCapitalizationEnabled
+    value: false
+
+- name: (System Preferences) Disable smart dashes
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: bool
+    state: present
+    key: NSAutomaticDashSubstitutionEnabled
+    value: false
+
+- name: (System Preferences) Disable smart quotes
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: bool
+    state: present
+    key: NSAutomaticQuoteSubstitutionEnabled
+    value: false
+
+- name: (System Preferences) Disable autocorrect
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: bool
+    state: present
+    key: NSAutomaticSpellingCorrectionEnabled
+    value: false
+
+- name: (System Preferences) Disable period via double space
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: bool
+    state: present
+    key: NSAutomaticPeriodSubstitutionEnabled
+    value: false
+
+- name: (System Preferences) Ask to confirm changes when closing documents
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: bool
+    state: present
+    key: NSCloseAlwaysConfirmsChanges
+    value: true
+
+- name: (System Preferences) Close windows when quitting an app
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: bool
+    state: present
+    key: NSQuitAlwaysKeepsWindows
+    value: false
+
+- name: (System Preferences) Scroll bar jumps to spot that's clocked
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: int
+    state: present
+    key: AppleScrollerPagingBehavior
+    value: 1
+
+# OMG Metric!
+- name: (System Preferences) Set measurement to metric
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: bool
+    state: present
+    key: AppleMetricUnits
+    value: true
+
+- name: (System Preferences) Set measurement unit to Centimeters
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: string
+    state: present
+    key: AppleMeasurementUnits
+    value: Centimeters
+
+- name: (System Preferences) Set temperature to Celsius
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: string
+    state: present
+    key: AppleTemperatureUnit
+    value: 'Celsius'
+
+- name: (System Preferences) Don't save .DS_Store files to network drives
+  osx_defaults:
+    domain: com.apple.desktopservices
+    type: bool
+    state: present
+    key: DSDontWriteNetworkStores
+    value: true
+
+- name: (System Preferences) Natural scrolling
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: bool
+    state: present
+    key: com.apple.swipescrolldirection
+    value: true
+
+- name: (System Preferences) Use a digital Cclock
+  osx_defaults:
+    domain: com.apple.menuextra.clock
+    type: int
+    state: present
+    key: IsAnalog
+    value: 0
+  notify: restart MenuBar
+
+- name: (System Preferences) Set the clock format to 24 hours with seconds
+  osx_defaults:
+    domain: com.apple.menuextra.clock
+    type: string
+    state: present
+    key: DateFormat
+    value: "EEE MMM d  H:mm:ss"
+  notify: restart MenuBar
+
+- name: (System Preferences) Flash the time separator
+  osx_defaults:
+    domain: com.apple.menuextra.clock
+    type: int
+    state: present
+    key: FlashDateSeparators
+    value: 1
+  notify: restart MenuBar
+
+- name: (System Preferences) Sound feedback when changing volume
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: int
+    state: present
+    key: com.apple.sound.beep.feedback
+    value: 1

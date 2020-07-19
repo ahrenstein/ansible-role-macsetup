@@ -1,0 +1,77 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Deploy my custom preferences for Siri
+
+- name: (Siri) Enable Siri
+  osx_defaults:
+    domain: com.apple.assistant.support
+    type: int
+    state: present
+    key: "Assistant Enabled"
+    value: 1
+
+- name: (Siri) Disable voice feedback
+  osx_defaults:
+    domain: com.apple.assistant.backedup
+    type: int
+    state: present
+    key: "Use device speaker for TTS"
+    value: 3
+
+- name: (Siri) Opt out of voice data sharing
+  osx_defaults:
+    domain: com.apple.assistant.support
+    type: int
+    state: present
+    key: "Siri Data Sharing Opt-In Status"
+    value: 2
+
+- name: (Siri) No Siri on lockscreen
+  osx_defaults:
+    domain: com.apple.Siri
+    type: int
+    state: present
+    key: LockscreenEnabled
+    value: 0
+
+- name: (Siri) Enable Type to Siri
+  osx_defaults:
+    domain: com.apple.Siri
+    type: int
+    state: present
+    key: TypeToSiriEnabled
+    value: 1
+
+- name: (Siri) Siri visible in Menu Bar
+  osx_defaults:
+    domain: com.apple.Siri
+    type: int
+    state: present
+    key: StatusMenuVisible
+    value: 1
+
+- name: (Siri) Don't listen for "Hey Siri"
+  osx_defaults:
+    domain: com.apple.voicetrigger
+    type: int
+    state: present
+    key: "VoiceTrigger Enabled"
+    value: 0
+
+- name: (Siri) Don't listen for "Hey Siri" on headphones
+  osx_defaults:
+    domain: com.apple.voicetrigger
+    type: int
+    state: present
+    key: "VoiceTriggerUserEnabled"
+    value: 0

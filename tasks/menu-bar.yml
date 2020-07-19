@@ -1,0 +1,99 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Configure the Menu Bar
+
+- name: (Menu Bar) Set the Menu Bar
+  osx_defaults:
+    domain: com.apple.systemuiserver
+    type: array
+    key: menuExtras
+    value:
+      - "/System/Library/CoreServices/Menu Extras/Clock.menu"
+      - "/System/Library/CoreServices/Menu Extras/AirPort.menu"
+      - "/System/Library/CoreServices/Menu Extras/User.menu"
+      - "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
+      - "/System/Library/CoreServices/Menu Extras/Displays.menu"
+      - "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
+  notify: restart MenuBar
+
+- name: (Menu Bar) Show Siri
+  osx_defaults:
+    domain: com.apple.systemuiserver
+    type: int
+    state: present
+    key: "NSStatusItem Visible Siri"
+    value: 1
+  notify: restart MenuBar
+
+- name: (Menu Bar) Show Time Machine
+  osx_defaults:
+    domain: com.apple.systemuiserver
+    type: int
+    state: present
+    key: "NSStatusItem Visible com.apple.menuextra.TimeMachine"
+    value: 1
+  notify: restart MenuBar
+
+- name: (Menu Bar) Show AirPlay
+  osx_defaults:
+    domain: com.apple.systemuiserver
+    type: int
+    state: present
+    key: "NSStatusItem Visible com.apple.menuextra.airplay"
+    value: 1
+  notify: restart MenuBar
+
+- name: (Menu Bar) Show AirPort
+  osx_defaults:
+    domain: com.apple.systemuiserver
+    type: int
+    state: present
+    key: "NSStatusItem Visible com.apple.menuextra.airport"
+    value: 1
+  notify: restart MenuBar
+
+- name: (Menu Bar) Show User Switcher
+  osx_defaults:
+    domain: com.apple.systemuiserver
+    type: int
+    state: present
+    key: "NSStatusItem Visible com.apple.menuextra.appleuser"
+    value: 1
+  notify: restart MenuBar
+
+- name: (Menu Bar) User Switcher shows full name
+  osx_defaults:
+    domain: com.apple.systempreferences
+    type: int
+    state: present
+    key: "com.apple.preferences.accounts.outline.usersparent"
+    value: 1
+  notify: restart MenuBar
+
+- name: (Menu Bar) Show Bluetooth
+  osx_defaults:
+    domain: com.apple.systemuiserver
+    type: int
+    state: present
+    key: "NSStatusItem Visible com.apple.menuextra.bluetooth"
+    value: 1
+  notify: restart MenuBar
+
+- name: (Menu Bar) Show Clock
+  osx_defaults:
+    domain: com.apple.systemuiserver
+    type: int
+    state: present
+    key: "NSStatusItem Visible com.apple.menuextra.clock"
+    value: 1
+  notify: restart MenuBar

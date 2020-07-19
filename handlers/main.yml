@@ -1,0 +1,22 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Handlers for restarting various services
+
+- name: restart Dock
+  command: killall Dock
+
+- name: restart MenuBar
+  command: killall SystemUIServer
+
+- name: restart Finder
+  command: killall Finder

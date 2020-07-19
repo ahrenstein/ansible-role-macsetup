@@ -1,0 +1,53 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Deploy common directories I use in my home directory and throughout the system.
+
+- name: (Profile) Deploy Code directory
+  file:
+    path: "~/Code"
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0700
+
+- name: (Profile) Deploy Protected directory
+  file:
+    path: "~/Protected"
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0700
+
+- name: (Profile) Deploy Scratch directory
+  file:
+    path: "~/Scratch"
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0700
+
+- name: (Profile) Create Vagrant directory
+  file:
+    path: "~/Vagrant"
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0700
+
+- name: (Profile) Checkout the VagrantBoxes repo from git
+  git:
+    repo: https://github.com/route1337/VagrantBoxes.git
+    dest: "~/Vagrant"
+    force: yes
+    depth: 1
+    version: main

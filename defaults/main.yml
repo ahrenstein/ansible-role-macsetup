@@ -1,0 +1,91 @@
+---
+#
+# Project:: Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Variables for Mac Setup
+
+homebrew_taps:
+  - "parera10/csshx"
+  - "ahrenstein/homebrew-taps"
+homebrew_packages:
+  - ansible-lint
+  - awscli
+  - "parera10/csshx/csshx"
+  - dc3dd
+  - docker
+  - docker-machine
+  - docker-machine-driver-vmware
+  - doctl
+  - exiftool
+  - ffmpeg
+  - git
+  - git-crypt
+  - git-flow
+  - git-lfs
+  - gnu-sed
+  - kubernetes-cli
+  - minikube
+  - openssh
+  - packer
+  - pipenv
+  - pyenv
+  - qemu
+  - rbenv
+  - ruby-build
+  - saml2aws-duo
+  - sshfs
+  - telnet
+  - terraform
+  - thefuck
+  - vfuse
+  - watch
+  - wget
+  - ykman
+  - youtube-dl
+homebrew_casks:
+  - aerial
+  - android-platform-tools
+  - audio-hijack
+  - commandq
+  - cryptomator
+  - docker
+  - farrago
+  - fission
+  - google-drive-file-stream
+  - gpg-suite
+  - intellij-idea
+  - loopback
+  - openra
+  - osxfuse
+  - profilecreator
+  - soundsource
+  - vagrant
+  - vagrant-vmware-utility
+  - virtualbox
+  - viscosity
+  - vmware-fusion
+full_name: "Matthew Ahrenstein"
+email: "matt@ahrenstein.com"
+gpg_short_id: "92180F60"
+licenses: false
+
+# You will have to get these yourself if you want to use the licensing tasks
+loopback_license: "INVALID"
+loopback_name: "INVALID"
+audiohijack_license: "INVALID"
+audiohijack_name: "INVALID"
+soundsource_license: "INVALID"
+soundsource_name: "INVALID"
+fission_license: "INVALID"
+fission_name: "INVALID"
+farrago_license: "INVALID"
+farrago_name: "INVALID"
+viscosity_license: "INVALID"

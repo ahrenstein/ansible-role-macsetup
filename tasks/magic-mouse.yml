@@ -1,0 +1,93 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Deploy my custom preferences for the Magic Trackpad
+
+- name: (Mouse) Enable right click
+  osx_defaults:
+    domain: com.apple.AppleMultitouchMouse
+    type: string
+    state: present
+    key: MouseButtonMode
+    value: "TwoButton"
+
+- name: (Mouse) Disable smart zoom
+  osx_defaults:
+    domain: com.apple.AppleMultitouchMouse
+    type: int
+    state: present
+    key: MouseOneFingerDoubleTapGesture
+    value: 0
+
+- name: (Mouse) Disable swipe between full screen apps
+  osx_defaults:
+    domain: com.apple.driver.AppleBluetoothMultitouch.mouse
+    type: int
+    state: present
+    key: MouseOneFingerDoubleTapGesture
+    value: 0
+
+- name: (Mouse) Set a decent tracking speed
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: string
+    state: present
+    key: com.apple.mouse.scaling
+    value: "0.6875"
+
+- name: (Mouse) Disable swipe between pages
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: int
+    state: present
+    key: AppleEnableMouseSwipeNavigateWithScrolls
+    value: 0
+
+- name: (Mouse) Disable swipe between pages
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: int
+    state: present
+    key: AppleEnableMouseSwipeNavigateWithScrolls
+    value: 0
+
+- name: (Mouse) Disable swipe between full screen apps
+  osx_defaults:
+    domain: com.apple.AppleMultitouchMouse
+    type: int
+    state: present
+    key: MouseTwoFingerHorizSwipeGesture
+    value: 0
+
+- name: (Mouse) Disable swipe between full screen apps
+  osx_defaults:
+    domain: com.apple.driver.AppleBluetoothMultitouch.mouse
+    type: int
+    state: present
+    key: MouseTwoFingerHorizSwipeGesture
+    value: 0
+
+- name: (Mouse) Disable tapping for Mission Control
+  osx_defaults:
+    domain: com.apple.AppleMultitouchMouse
+    type: int
+    state: present
+    key: MouseTwoFingerDoubleTapGesture
+    value: 0
+
+- name: (Mouse) Disable tapping for Mission Control
+  osx_defaults:
+    domain: com.apple.driver.AppleBluetoothMultitouch.mouse
+    type: int
+    state: present
+    key: MouseTwoFingerDoubleTapGesture
+    value: 0

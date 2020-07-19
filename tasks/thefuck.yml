@@ -1,0 +1,34 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Install and configure thefuck
+
+- name: (Thefuck) Install thefuck
+  homebrew:
+    name: "thefuck"
+    state: present
+
+- name: (Thefuck) Make sure thefuck custom rules directory exists
+  file:
+    path: "~/.config/thefuck/rules"
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    group: staff
+    mode: 0755
+
+- name: (Thefuck) Checkout my custom rules from git for root
+  git:
+    repo: https://github.com/ahrenstein/thefuck-rules.git
+    dest: "~/.config/thefuck/rules"
+    force: yes
+    depth: 1
+    version: main

@@ -1,0 +1,157 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Deploy my custom preferences for the Magic Trackpad
+
+- name: (Trackpad) Disable Force Click
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: bool
+    state: present
+    key: ForceSuppressed
+    value: true
+
+- name: (Trackpad) right click with two fingers
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: bool
+    state: present
+    key: TrackpadRightClick
+    value: true
+
+- name: (Trackpad) Look up data with 3 finger tap
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: int
+    state: present
+    key: TrackpadThreeFingerTapGesture
+    value: 2
+
+- name: (Trackpad) Disable tap to click
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: int
+    state: present
+    key: Clicking
+    value: 0
+
+- name: (Trackpad) Medium click strengh
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: int
+    state: present
+    key: FirstClickThreshold
+    value: 1
+
+- name: (Trackpad) Zoom with two finger pinch
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: int
+    state: present
+    key: TrackpadPinch
+    value: 1
+
+- name: (Trackpad) Enable SmartZoon
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: int
+    state: present
+    key: TrackpadTwoFingerDoubleTapGesture
+    value: 1
+
+- name: (Trackpad) Enable two finger rotate
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: int
+    state: present
+    key: TrackpadRotate
+    value: 1
+
+- name: (Trackpad) Set a decent tracking speed
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: string
+    state: present
+    key: com.apple.trackpad.scaling
+    value: "0.6875"
+
+- name: (Trackpad) Enable horizontal swipe between pages
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: int
+    state: present
+    key: TrackpadThreeFingerHorizSwipeGesture
+    value: 1
+
+- name: (Trackpad) Enable vertical swipe between pages
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: int
+    state: present
+    key: TrackpadThreeFingerVertSwipeGesture
+    value: 1
+
+- name: (Trackpad) Swipe from the right with two fingers for Notification Center
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: int
+    state: present
+    key: TrackpadTwoFingerFromRightEdgeSwipeGesture
+    value: 1
+
+- name: (Trackpad) 4 fingers to swipe between full screen apps
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: int
+    state: present
+    key: TrackpadFourFingerHorizSwipeGesture
+    value: 2
+
+- name: (Trackpad) 4 fingers to swipe up for Mission Control
+  osx_defaults:
+    domain: com.apple.AppleMultitouchTrackpad
+    type: int
+    state: present
+    key: TrackpadFourFingerVertSwipeGesture
+    value: 2
+
+- name: (Trackpad) Enable Mission Control trackpad gesture
+  osx_defaults:
+    domain: com.apple.Dock
+    type: int
+    state: present
+    key: showMissionControlGestureEnabled
+    value: 1
+
+- name: (Trackpad) Enable App Expose trackpad gesture
+  osx_defaults:
+    domain: com.apple.Dock
+    type: int
+    state: present
+    key: showAppExposeGestureEnabled
+    value: 1
+
+- name: (Trackpad) Enable Desktop trackpad gesture
+  osx_defaults:
+    domain: com.apple.Dock
+    type: int
+    state: present
+    key: showDesktopGestureEnabled
+    value: 1
+
+- name: (Trackpad) Enable Launchpad trackpad gesture
+  osx_defaults:
+    domain: com.apple.Dock
+    type: int
+    state: present
+    key: showLaunchpadGestureEnabled
+    value: 1
