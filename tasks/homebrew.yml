@@ -38,10 +38,17 @@
     state: present
     sudo_password: "{{ ansible_become_pass }}"
 
-- name: (Homebrew) Remove Apple quarantine on all Applications
+- name: Register a list of applications to remove Gatekeeper quarantine from
+  shell:
+    cmd: "ls /Applications | grep -v Safari"
+    creates: /tmp/DoesNot.Exist # Hack to deal with stupid ansible linting rule
+  register: gatekeeper_list
+
+- name: (Homebrew) Remove Gatekeeper quarantine on applications list
   become: yes
   become_user: root
   command:
-    cmd: "xattr -rd com.apple.quarantine /Applications"
+    cmd: 'xattr -rd com.apple.quarantine "/Applications/{{ item }}"'
     creates: /tmp/DoesNot.Exist # Hack to deal with stupid ansible linting rule
-  ignore_errors: yes
+  with_items:
+    - '{{ gatekeeper_list.stdout_lines }}'
