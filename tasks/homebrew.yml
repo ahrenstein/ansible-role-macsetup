@@ -40,6 +40,8 @@
 
 - name: (Homebrew) Remove Apple quarantine on all Applications
   become: yes
+  become_user: root
   command:
     cmd: "xattr -rd com.apple.quarantine /Applications"
-    removes: /tmp/DoesNot.Exist # Hack to deal with stupid ansible linting rule
+    creates: /tmp/DoesNot.Exist # Hack to deal with stupid ansible linting rule
+  ignore_errors: yes

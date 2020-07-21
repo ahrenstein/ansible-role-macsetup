@@ -1,0 +1,33 @@
+---
+#
+# Project:: Ansible Role - Mac Setup
+#
+# Copyright 2020, Matthew Ahrenstein, All Rights Reserved.
+#
+# Maintainers:
+# - Matthew Ahrenstein: @ahrenstein
+#
+# See LICENSE
+#
+
+# Configure virtual environments for development
+
+- name: (Virtual Environments) Install Ruby 2.7.0
+  shell:
+    cmd: 'rbenv install 2.7.0'
+    creates: "~/.rbenv/versions/2.7.0"
+
+- name: (Virtual Environments) Set Ruby 2.7.0 as the global environment
+  shell:
+    cmd: 'rbenv global 2.7.0'
+    creates: "~/.rbenv/version"
+
+- name: (Virtual Environments) Install Python 3.8.0
+  shell:
+    cmd: 'pyenv install 3.8.0'
+    creates: "~/.pyenv/versions/3.8.0"
+
+- name: (Virtual Environments) Set Python 3.8.0 as the global environment
+  shell:
+    cmd: 'pyenv global 3.8.0'
+    creates: "~/.pyenv/version"

@@ -59,6 +59,7 @@ Licensing variables:
 4. `fission_license` and `fission_name` -  - Licensing info for Rogue Amoeba's [Fission](https://rogueamoeba.com/fission/)
 5. `farrago_license` and `farrago_name` - Licensing info for Rogue Amoeba's [Farrago](https://rogueamoeba.com/farrago/)
 6. `viscosity_license` - Licensing info for [Viscosity VPN Client](https://sparklabs.com/viscosity/)
+7. `commandq_license` - Licensing info for [CommandQ](https://commandqapp.com/) (The format is `email,license key` encoded in base64 with no new line) 
 
 Running this role locally
 -------------------------
