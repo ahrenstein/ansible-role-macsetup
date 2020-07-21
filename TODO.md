@@ -8,12 +8,16 @@ Version 1.2.0
 1. Keyboard shortcuts (Disable CTRL+arrow keys)
 2. Automate licensing for VMware Fusion
 
+Version 1.3.0
+-------------
+
+1. Add second language for keyboard and dictionary
+2. Manage the Dock layout
+
 Version 1.5.0
 -------------
 
 1. Common Mac App Store Apps
-2. Add second language for keyboard and dictionary
-3. Manage the Dock layout
 
 Version 2.0.0
 -------------
