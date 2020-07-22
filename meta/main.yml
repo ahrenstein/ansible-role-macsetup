@@ -17,9 +17,9 @@ galaxy_info:
   license: "license (MIT)"
   min_ansible_version: "2.8"
   platforms:
-    - name: macOS
+    - name: MacOSX
       versions:
-        - Catalina
+        - 10.15
   galaxy_tags:
     - macos
     - devops

@@ -42,7 +42,7 @@ The following variables should be changed as they default to my identity:
 
 1. `full_name` - Your first and last name
 2. `email` - Your email address
-3. `gpg_short_id` - Your GPG hey's short ID
+3. `gpg_short_id` - Your GPG key's short ID
 
 Changing the following variables is less required but are still very personal in taste:
 
@@ -59,10 +59,12 @@ Licensing variables:
 4. `fission_license` and `fission_name` -  - Licensing info for Rogue Amoeba's [Fission](https://rogueamoeba.com/fission/)
 5. `farrago_license` and `farrago_name` - Licensing info for Rogue Amoeba's [Farrago](https://rogueamoeba.com/farrago/)
 6. `viscosity_license` - Licensing info for [Viscosity VPN Client](https://sparklabs.com/viscosity/)
+7. `commandq_license` - Licensing info for [CommandQ](https://commandqapp.com/) (The format is `email,license key` encoded in base64 with no new line) 
 
 Running this role locally
 -------------------------
-To run this role against the local machine simply run `ansible-playbook playbook-local.yml -i local.inventory`
+To run this role against the local machine simply run `ansible-playbook playbook-local.yml -i local.inventory`  
+To go from zero (no Homebrew or Ansible) to 100% you can optionally run something like [devops-mac](https://github.com/route1337/devops-mac) which uses this role.
 
 Testing
 -------

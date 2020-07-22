@@ -44,3 +44,8 @@
     state: present
     key: License
     value: '{{ viscosity_license }}'
+
+- name: (Licensing) Apply license for CommandQ
+  command:
+    cmd: 'open "cq2://activate/{{ commandq_license }}"'
+    creates: "~/Library/Preferences/com.commandqapp.CommandQ.plist" # This is a bit of a hack to get around a dumb ansible-lint rule
