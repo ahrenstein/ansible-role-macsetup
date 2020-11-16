@@ -2,6 +2,14 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo and the role it contains
 
+Version 1.1.1
+-------------
+
+1. Minor fixes for Big Sur
+2. osxfuse removed as 11.0 no longer supports kexts
+3. Removed aerial screensaver
+4. Removed OpenRA
+
 Version 1.1.0
 -------------
 

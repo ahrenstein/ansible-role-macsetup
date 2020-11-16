@@ -22,7 +22,7 @@ Requirements
 ------------
 To configure a machine you must have the following:
 
-1. macOS Catalina (10.15.5) or later (This may work on earlier versions but it's untested)
+1. macOS Big Sur (11.0.1) or later (This may work on earlier versions, but it's untested)
 2. The account you're using must be an Admin
 3. Internet access
 4. [Homebrew](https://brew.sh/) pre-installed

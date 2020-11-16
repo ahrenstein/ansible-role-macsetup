@@ -51,7 +51,6 @@ homebrew_packages:
   - ykman
   - youtube-dl
 homebrew_casks:
-  - aerial
   - android-platform-tools
   - audio-hijack
   - commandq
@@ -63,8 +62,6 @@ homebrew_casks:
   - gpg-suite
   - intellij-idea
   - loopback
-  - openra
-  - osxfuse
   - profilecreator
   - soundsource
   - vagrant
