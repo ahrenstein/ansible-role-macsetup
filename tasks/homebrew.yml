@@ -21,6 +21,12 @@
     name: "{{ homebrew_taps }}"
     state: present
 
+- name: (Homebrew) Install osxfuse ahead of packages
+  homebrew_cask:
+    name: osxfuse
+    state: present
+    sudo_password: "{{ ansible_become_pass }}"
+
 - name: (Homebrew) Install my usual Homebrew packages
   homebrew:
     name: "{{ homebrew_packages }}"

@@ -25,5 +25,5 @@
 - import_tasks: menu-bar.yml
 - import_tasks: spotlight.yml
 - import_tasks: licenses.yml
-- import_tasks: virtual-envs.yml
   when: licenses is true
+- import_tasks: virtual-envs.yml

@@ -5,10 +5,11 @@ A list of all the changes made to this repo and the role it contains
 Version 1.1.1
 -------------
 
-1. Minor fixes for Big Sur
-2. osxfuse removed as 11.0 no longer supports kexts
-3. Removed aerial screensaver
-4. Removed OpenRA
+1. Fixed things required for Big Sur support (**Intel only**)
+2. Removed aerial screensaver
+3. Removed OpenRA
+4. Fixed licensing logic
+5. Bumped Python virtual environment to 3.9.0
 
 Version 1.1.0
 -------------
