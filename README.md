@@ -3,9 +3,9 @@ Ansible Role - Mac Setup
 This repo contains an Ansible role that configures Matthew Ahrenstein's personal preferences and settings on a new out of the box Mac.  
 This drastically speeds up how long it takes to setup a new Mac for me.
 
-Catalina and MDM
+Big Sur and MDM
 ----------------
-This repository is tested against machines enrolled in MDM via DEP with a configuration profile that whitelists kexts from the
+This repository is tested against machines enrolled in MDM via DEP with a configuration profile that whitelists system extensions from the
 following vendor IDs:
 
 | Vendor Name  | Team ID         | KEXT IDs                               |
@@ -15,7 +15,7 @@ following vendor IDs:
 | Google       | EQHXZ8M8AV      | com.google.drivefs.filesystems.dfsfuse |
 | Intel        | Z3L495V9L4      | (ALL)                                  |
 
-If these are not whitelisted ahead of running this role, you may have to approve kexts as prompts come up,
+If these are not whitelisted ahead of running this role, you may have to approve system extensions as prompts come up,
 and then retry the play. This is due to some of the Homebrew casks that get installed.
 
 Requirements

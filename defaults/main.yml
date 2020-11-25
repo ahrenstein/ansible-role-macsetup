@@ -55,20 +55,26 @@ homebrew_casks:
   - audio-hijack
   - commandq
   - cryptomator
+  - discord
   - docker
   - farrago
   - fission
-  - google-drive-file-stream
   - gpg-suite
+  - handbrake
   - intellij-idea
   - loopback
   - profilecreator
   - soundsource
+  - suspicious-package
   - vagrant
   - vagrant-vmware-utility
   - virtualbox
   - viscosity
+  - vlc
   - vmware-fusion
+  - wireshark
+  - yubico-yubikey-manager
+  - yubico-yubikey-personalization-gui
 full_name: "Matthew Ahrenstein"
 email: "matt@ahrenstein.com"
 gpg_short_id: "92180F60"

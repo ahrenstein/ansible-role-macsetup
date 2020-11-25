@@ -2,6 +2,11 @@ Ansible Role - Mac Setup: To Do List
 ====================================
 The versions below are future versions that will be released once those features have been completed.
 
+Version 1.1.2
+-------------
+
+1. Apple Silicon support
+
 Version 1.2.0
 -------------
 
