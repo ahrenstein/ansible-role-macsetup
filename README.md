@@ -37,7 +37,7 @@ Limitations
 
 1. This role is not meant to be run against remote machines
 2. This role will prompt for the logged in user's password in order to use sudo for the Homebrew steps
-3. **This role will attempt to logout the current user in order for some settings to apply correctly**
+3. **Logging out after the role completes is recommended as some settings don't apply until a new login occurs**
 
 Variables
 ---------

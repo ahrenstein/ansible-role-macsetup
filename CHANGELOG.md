@@ -20,7 +20,6 @@ Version 1.1.1
     7. yubico-yubikey-personalization-gui
 4. Fixed licensing logic
 5. Bumped Python virtual environment to 3.9.0
-6. Logout when the role completes
 
 Version 1.1.0
 -------------
