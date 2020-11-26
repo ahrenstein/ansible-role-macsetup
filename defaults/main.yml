@@ -73,8 +73,8 @@ homebrew_casks:
   - vlc
   - vmware-fusion
   - wireshark
-  - yubico-yubikey-manager
-  - yubico-yubikey-personalization-gui
+  - homebrew/cask-drivers/yubico-yubikey-manager
+  - homebrew/cask-drivers/yubico-yubikey-personalization-gui
 full_name: "Matthew Ahrenstein"
 email: "matt@ahrenstein.com"
 gpg_short_id: "92180F60"

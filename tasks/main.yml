@@ -27,3 +27,4 @@
 - import_tasks: licenses.yml
   when: licenses is true
 - import_tasks: virtual-envs.yml
+- import_tasks: logout.yml

@@ -3,6 +3,10 @@ Ansible Role - Mac Setup
 This repo contains an Ansible role that configures Matthew Ahrenstein's personal preferences and settings on a new out of the box Mac.  
 This drastically speeds up how long it takes to setup a new Mac for me.
 
+Apple Silicon
+-------------
+Right now this Ansible role is tested against Big Sur on Intel Macs only. In the future it will be tested on Apple Silicon Macs.
+
 Big Sur and MDM
 ----------------
 This repository is tested against machines enrolled in MDM via DEP with a configuration profile that whitelists system extensions from the
@@ -33,6 +37,7 @@ Limitations
 
 1. This role is not meant to be run against remote machines
 2. This role will prompt for the logged in user's password in order to use sudo for the Homebrew steps
+3. **This role will attempt to logout the current user in order for some settings to apply correctly**
 
 Variables
 ---------
