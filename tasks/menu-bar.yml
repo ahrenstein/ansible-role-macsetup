@@ -53,39 +53,39 @@
     value: 1
   notify: restart MenuBar
 
-- name: (Menu Bar) Show AirPort
+- name: (Menu Bar) Show WiFi
   osx_defaults:
-    domain: com.apple.systemuiserver
+    domain: com.apple.controlcenter
     type: int
     state: present
-    key: "NSStatusItem Visible com.apple.menuextra.airport"
+    key: "NSStatusItem Visible WiFi"
+    value: 1
+  notify: restart MenuBar
+
+- name: (Menu Bar) Always Show Do Not Disturb
+  osx_defaults:
+    domain: com.apple.controlcenter
+    type: int
+    state: present
+    key: "NSStatusItem Visible DoNotDisturb"
     value: 1
   notify: restart MenuBar
 
 - name: (Menu Bar) Show User Switcher
   osx_defaults:
-    domain: com.apple.systemuiserver
+    domain: com.apple.controlcenter
     type: int
     state: present
-    key: "NSStatusItem Visible com.apple.menuextra.appleuser"
-    value: 1
-  notify: restart MenuBar
-
-- name: (Menu Bar) User Switcher shows full name
-  osx_defaults:
-    domain: com.apple.systempreferences
-    type: int
-    state: present
-    key: "com.apple.preferences.accounts.outline.usersparent"
+    key: "NSStatusItem Visible UserSwitcher"
     value: 1
   notify: restart MenuBar
 
 - name: (Menu Bar) Show Bluetooth
   osx_defaults:
-    domain: com.apple.systemuiserver
+    domain: com.apple.controlcenter
     type: int
     state: present
-    key: "NSStatusItem Visible com.apple.menuextra.bluetooth"
+    key: "NSStatusItem Visible Bluetooth"
     value: 1
   notify: restart MenuBar
 

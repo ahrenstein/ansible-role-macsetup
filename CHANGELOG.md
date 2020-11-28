@@ -20,6 +20,9 @@ Version 1.1.1
     7. yubico-yubikey-personalization-gui
 4. Fixed licensing logic
 5. Bumped Python virtual environment to 3.9.0
+6. Corrected some minor typos
+7. Removed spotlight settings
+8. Updated Menu Bar preferences to Big Sur keys
 
 Version 1.1.0
 -------------

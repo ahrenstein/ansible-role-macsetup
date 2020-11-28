@@ -100,7 +100,7 @@
     key: NSQuitAlwaysKeepsWindows
     value: false
 
-- name: (System Preferences) Scroll bar jumps to spot that's clocked
+- name: (System Preferences) Scroll bar jumps to spot that's clicked
   osx_defaults:
     domain: NSGlobalDomain
     type: int
@@ -157,6 +157,14 @@
     key: IsAnalog
     value: 0
   notify: restart MenuBar
+
+- name: (System Preferences) Force ICU 24 hour time
+  osx_defaults:
+    - domain: NSGlobalDomain
+      type: int
+      state: present
+      key: AppleICUForce24HourTime
+      value: 1
 
 - name: (System Preferences) Set the clock format to 24 hours with seconds
   osx_defaults:

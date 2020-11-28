@@ -23,7 +23,6 @@
 - import_tasks: magic-mouse.yml
 - import_tasks: mission-control.yml
 - import_tasks: menu-bar.yml
-- import_tasks: spotlight.yml
 - import_tasks: licenses.yml
   when: licenses is true
 - import_tasks: virtual-envs.yml
