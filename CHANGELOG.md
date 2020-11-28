@@ -23,6 +23,7 @@ Version 1.1.1
 6. Corrected some minor typos
 7. Removed spotlight settings
 8. Updated Menu Bar preferences to Big Sur keys
+9. Disable Ad Personalization
 
 Version 1.1.0
 -------------

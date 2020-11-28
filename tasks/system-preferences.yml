@@ -191,3 +191,11 @@
     state: present
     key: com.apple.sound.beep.feedback
     value: 1
+
+- name: (System Preferences) Disable Personalized Ads
+  osx_defaults:
+    domain: com.apple.AdLib
+    type: int
+    state: present
+    key: allowApplePersonalizedAdvertising
+    value: 0
