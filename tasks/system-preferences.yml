@@ -160,11 +160,11 @@
 
 - name: (System Preferences) Force ICU 24 hour time
   osx_defaults:
-    - domain: NSGlobalDomain
-      type: int
-      state: present
-      key: AppleICUForce24HourTime
-      value: 1
+    domain: NSGlobalDomain
+    type: int
+    state: present
+    key: AppleICUForce24HourTime
+    value: 1
 
 - name: (System Preferences) Set the clock format to 24 hours with seconds
   osx_defaults:
