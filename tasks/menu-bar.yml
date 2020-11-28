@@ -62,15 +62,6 @@
     value: 1
   notify: restart MenuBar
 
-- name: (Menu Bar) Always Show Do Not Disturb
-  osx_defaults:
-    domain: com.apple.controlcenter
-    type: int
-    state: present
-    key: "NSStatusItem Visible DoNotDisturb"
-    value: 1
-  notify: restart MenuBar
-
 - name: (Menu Bar) Show User Switcher
   osx_defaults:
     domain: com.apple.controlcenter
