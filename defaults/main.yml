@@ -39,6 +39,7 @@ homebrew_packages:
   - pyenv
   - qemu
   - rbenv
+  - readline
   - ruby-build
   - saml2aws-duo
   - sshfs
@@ -48,8 +49,10 @@ homebrew_packages:
   - vfuse
   - watch
   - wget
+  - xz
   - ykman
   - youtube-dl
+  - zlib
 homebrew_casks:
   - android-platform-tools
   - audio-hijack

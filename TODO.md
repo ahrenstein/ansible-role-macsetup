@@ -6,6 +6,7 @@ Version 1.1.2
 -------------
 
 1. Apple Silicon support
+2. Make Python virtual environment installation less complicated
 
 Version 1.2.0
 -------------

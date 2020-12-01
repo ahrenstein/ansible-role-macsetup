@@ -18,12 +18,16 @@ Version 1.1.1
     5. wireshark
     6. yubico-yubikey-manager
     7. yubico-yubikey-personalization-gui
-4. Fixed licensing logic
-5. Bumped Python virtual environment to 3.9.0
+4. Added the following brews
+    1. readline
+    2. zlib
+    3. xz
+5. Fixed licensing logic
 6. Corrected some minor typos
 7. Removed spotlight settings
 8. Updated Menu Bar preferences to Big Sur keys
 9. Disable Ad Personalization
+10. Fixed Python 3.8.0 installation method (This can hopefully be made less complicated later)
 
 Version 1.1.0
 -------------
