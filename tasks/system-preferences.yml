@@ -149,7 +149,7 @@
     key: com.apple.swipescrolldirection
     value: true
 
-- name: (System Preferences) Use a digital Cclock
+- name: (System Preferences) Use a digital Clock
   osx_defaults:
     domain: com.apple.menuextra.clock
     type: int

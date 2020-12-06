@@ -62,12 +62,12 @@
     value: 1
   notify: restart MenuBar
 
-- name: (Menu Bar) Show User Switcher
+- name: (Menu Bar) Show Screen Mirroring Always
   osx_defaults:
     domain: com.apple.controlcenter
-    type: int
+    type: str
     state: present
-    key: "NSStatusItem Visible UserSwitcher"
+    key: "NSStatusItem Visible ScreenMirroring"
     value: 1
   notify: restart MenuBar
 

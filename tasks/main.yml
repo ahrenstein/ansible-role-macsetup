@@ -19,8 +19,8 @@
 - import_tasks: terminal.yml
 - import_tasks: system-preferences.yml
 - import_tasks: siri.yml
-- import_tasks: magic-trackpad.yml
-- import_tasks: magic-mouse.yml
+#- import_tasks: magic-trackpad.yml # Currently broken as Big Sur is ignoring the settings
+#- import_tasks: magic-mouse.yml # Currently broken as Big Sur is ignoring the settings
 - import_tasks: mission-control.yml
 - import_tasks: menu-bar.yml
 - import_tasks: licenses.yml

@@ -31,9 +31,10 @@
     mode: 0755
 
 - name: (Terminal) Remove com.apple.quarantine from Terminal profile
-  shell:
-    cmd: "/usr/bin/xattr -d com.apple.quarantine /opt/Devops.terminal"
-    creates: /opt/Devops.terminal
+  command: "/usr/bin/xattr -d com.apple.quarantine /opt/Devops.terminal"
+  args:
+    removes: /opt/Devops.terminal
+  ignore_errors: 1
 
 - name: Load custom Terminal profile to add it
   shell:

@@ -28,6 +28,8 @@ Version 1.1.1
 8. Updated Menu Bar preferences to Big Sur keys
 9. Disable Ad Personalization
 10. Fixed Python 3.8.0 installation method (This can hopefully be made less complicated later)
+11. Removed showing Fast User Switcher
+12. Disabled mouse and trackpad tasks for now as they don't work
 
 Version 1.1.0
 -------------
