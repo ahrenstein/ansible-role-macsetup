@@ -30,6 +30,11 @@
     group: staff
     mode: 0755
 
+- name: (Terminal) Remove com.apple.quarantine from Terminal profile
+  shell:
+    cmd: "/usr/bin/xattr -d com.apple.quarantine /opt/Devops.terminal"
+    creates: /opt/Devops.terminal
+
 - name: Load custom Terminal profile to add it
   shell:
     cmd: "osascript /tmp/TermProfile.scpt && rm -rf /tmp/TermProfile.scpt"

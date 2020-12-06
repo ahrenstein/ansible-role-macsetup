@@ -17,10 +17,8 @@ following vendor IDs:
 | Oracle       | VB5E2TV963      | (ALL)                                  |
 | VMware       | EG7KH642X6      | (ALL)                                  |
 | Google       | EQHXZ8M8AV      | com.google.drivefs.filesystems.dfsfuse |
-| Intel        | Z3L495V9L4      | (ALL)                                  |
 
-If these are not whitelisted ahead of running this role, you may have to approve system extensions as prompts come up,
-and then retry the play. This is due to some of the Homebrew casks that get installed.
+If these are not whitelisted ahead of running this role, you may have to approve system extensions as prompts come up. This is due to some of the Homebrew casks that get installed.
 
 Requirements
 ------------
