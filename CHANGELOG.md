@@ -1,6 +1,35 @@
 Ansible Role - Mac Setup: Changelog
 =====================================
-A list of all the changes made to this repo and the role it contains
+A list of all the changes made to this repo, and the role it contains
+
+Version 1.1.1
+-------------
+
+1. Fixed things required for Big Sur support (**Intel only**)
+2. Removed the following casks:
+    1. aerial
+    2. openra
+    3. google-drive-file-stream
+3. Added the following casks:
+    1. discord
+    2. handbrake
+    3. suspicious-package
+    4. vlc
+    5. wireshark
+    6. yubico-yubikey-manager
+    7. yubico-yubikey-personalization-gui
+4. Added the following brews
+    1. readline
+    2. zlib
+    3. xz
+5. Fixed licensing logic
+6. Corrected some minor typos
+7. Removed spotlight settings
+8. Updated Menu Bar preferences to Big Sur keys
+9. Disable Ad Personalization
+10. Fixed Python 3.8.0 installation method (This can hopefully be made less complicated later)
+11. Removed showing Fast User Switcher
+12. Disabled mouse and trackpad tasks for now as they don't work
 
 Version 1.1.0
 -------------

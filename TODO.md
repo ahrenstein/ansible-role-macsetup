@@ -2,6 +2,17 @@ Ansible Role - Mac Setup: To Do List
 ====================================
 The versions below are future versions that will be released once those features have been completed.
 
+Version 1.1.2
+-------------
+
+1. Apple Silicon support
+2. Make Python virtual environment installation less complicated
+3. Many of the Menu Bar items (ex: Bluetooth, Screen Mirroring) are not able to be set automatically
+   even with the `defaults write` command
+4. Trackpad and Magic Mouse settings are not able to be set automatically
+   even with the `defaults write` command
+
+
 Version 1.2.0
 -------------
 

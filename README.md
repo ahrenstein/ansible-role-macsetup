@@ -3,9 +3,13 @@ Ansible Role - Mac Setup
 This repo contains an Ansible role that configures Matthew Ahrenstein's personal preferences and settings on a new out of the box Mac.  
 This drastically speeds up how long it takes to setup a new Mac for me.
 
-Catalina and MDM
+Apple Silicon
+-------------
+Right now this Ansible role is tested against Big Sur on Intel Macs only. In the future it will be tested on Apple Silicon Macs.
+
+Big Sur and MDM
 ----------------
-This repository is tested against machines enrolled in MDM via DEP with a configuration profile that whitelists kexts from the
+This repository is tested against machines enrolled in MDM via DEP with a configuration profile that whitelists system extensions from the
 following vendor IDs:
 
 | Vendor Name  | Team ID         | KEXT IDs                               |
@@ -13,16 +17,14 @@ following vendor IDs:
 | Oracle       | VB5E2TV963      | (ALL)                                  |
 | VMware       | EG7KH642X6      | (ALL)                                  |
 | Google       | EQHXZ8M8AV      | com.google.drivefs.filesystems.dfsfuse |
-| Intel        | Z3L495V9L4      | (ALL)                                  |
 
-If these are not whitelisted ahead of running this role, you may have to approve kexts as prompts come up,
-and then retry the play. This is due to some of the Homebrew casks that get installed.
+If these are not whitelisted ahead of running this role, you may have to approve system extensions as prompts come up. This is due to some of the Homebrew casks that get installed.
 
 Requirements
 ------------
 To configure a machine you must have the following:
 
-1. macOS Catalina (10.15.5) or later (This may work on earlier versions but it's untested)
+1. macOS Big Sur (11.0.1) or later (This may work on earlier versions, but it's untested)
 2. The account you're using must be an Admin
 3. Internet access
 4. [Homebrew](https://brew.sh/) pre-installed
@@ -33,6 +35,7 @@ Limitations
 
 1. This role is not meant to be run against remote machines
 2. This role will prompt for the logged in user's password in order to use sudo for the Homebrew steps
+3. **Logging out after the role completes is recommended as some settings don't apply until a new login occurs**
 
 Variables
 ---------

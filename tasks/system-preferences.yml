@@ -100,7 +100,7 @@
     key: NSQuitAlwaysKeepsWindows
     value: false
 
-- name: (System Preferences) Scroll bar jumps to spot that's clocked
+- name: (System Preferences) Scroll bar jumps to spot that's clicked
   osx_defaults:
     domain: NSGlobalDomain
     type: int
@@ -149,7 +149,7 @@
     key: com.apple.swipescrolldirection
     value: true
 
-- name: (System Preferences) Use a digital Cclock
+- name: (System Preferences) Use a digital Clock
   osx_defaults:
     domain: com.apple.menuextra.clock
     type: int
@@ -157,6 +157,14 @@
     key: IsAnalog
     value: 0
   notify: restart MenuBar
+
+- name: (System Preferences) Force ICU 24 hour time
+  osx_defaults:
+    domain: NSGlobalDomain
+    type: int
+    state: present
+    key: AppleICUForce24HourTime
+    value: 1
 
 - name: (System Preferences) Set the clock format to 24 hours with seconds
   osx_defaults:
@@ -183,3 +191,11 @@
     state: present
     key: com.apple.sound.beep.feedback
     value: 1
+
+- name: (System Preferences) Disable Personalized Ads
+  osx_defaults:
+    domain: com.apple.AdLib
+    type: int
+    state: present
+    key: allowApplePersonalizedAdvertising
+    value: 0
