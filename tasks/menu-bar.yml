@@ -65,7 +65,7 @@
 - name: (Menu Bar) Show Screen Mirroring Always
   osx_defaults:
     domain: com.apple.controlcenter
-    type: string
+    type: bool
     state: present
     key: "NSStatusItem Visible ScreenMirroring"
     value: 1
