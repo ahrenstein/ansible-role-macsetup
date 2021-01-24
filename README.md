@@ -17,6 +17,7 @@ following vendor IDs:
 | Oracle       | VB5E2TV963      | (ALL)                                  |
 | VMware       | EG7KH642X6      | (ALL)                                  |
 | Google       | EQHXZ8M8AV      | com.google.drivefs.filesystems.dfsfuse |
+| Rogue Amoeba | 7266XEXAPM      | /Library/Audio/Plug-Ins/HAL/ACE.driver |
 
 If these are not whitelisted ahead of running this role, you may have to approve system extensions as prompts come up. This is due to some of the Homebrew casks that get installed.
 
@@ -24,7 +25,7 @@ Requirements
 ------------
 To configure a machine you must have the following:
 
-1. macOS Big Sur (11.0.1) or later (This may work on earlier versions, but it's untested)
+1. macOS Big Sur (11.1) or later (This may work on earlier versions, but only the latest is tested)
 2. The account you're using must be an Admin
 3. Internet access
 4. [Homebrew](https://brew.sh/) pre-installed

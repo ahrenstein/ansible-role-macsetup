@@ -2,6 +2,14 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.1.2
+-------------
+
+1. Updated Homebrew code now that casks are part of the main brew command
+2. Added the following brews
+    1. ripgrep
+3. Added a rebase config setting to .gitconfig
+
 Version 1.1.1
 -------------
 
