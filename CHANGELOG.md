@@ -2,6 +2,11 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.1.3
+-------------
+
+1. Updated .gitconfig template to use `main` as the default branch name for new repos
+
 Version 1.1.2
 -------------
 
