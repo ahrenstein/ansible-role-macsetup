@@ -2,6 +2,14 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.1.4
+-------------
+
+1. Adding `fzf`
+   1. Added as a brew
+   2. Run `yes | /usr/local/opt/fzf/install` to configure fzf 
+2. Remove the `sshfs` brew because it's deprecated
+
 Version 1.1.3
 -------------
 

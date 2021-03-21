@@ -12,7 +12,6 @@ Version 1.1.5
 4. Trackpad and Magic Mouse settings are not able to be set automatically
    even with the `defaults write` command
 
-
 Version 1.2.0
 -------------
 

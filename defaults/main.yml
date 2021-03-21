@@ -26,6 +26,7 @@ homebrew_packages:
   - doctl
   - exiftool
   - ffmpeg
+  - fzf
   - git
   - git-crypt
   - git-flow
@@ -43,7 +44,6 @@ homebrew_packages:
   - ripgrep
   - ruby-build
   - saml2aws-duo
-  - sshfs
   - telnet
   - terraform
   - thefuck
