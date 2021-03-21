@@ -20,6 +20,12 @@
     group: staff
     mode: 0644
 
+- name: (Dot Files) Configure fzf
+  shell: "yes | /usr/local/opt/fzf/install"
+  args:
+    executable: '/bin/zsh'
+    creates: "~/.fzf.zsh"
+
 - name: (Dot Files) Make sure /opt exists
   become: true
   become_user: root
