@@ -52,3 +52,5 @@
     creates: /tmp/DoesNot.Exist # Hack to deal with stupid ansible linting rule
   with_items:
     - '{{ gatekeeper_list.stdout_lines }}'
+  ignore_errors: yes # Some apps fail to have this applied but it doesn't matter
+
