@@ -6,7 +6,7 @@ Version 1.1.5
 -------------
 
 1. Removing `osxfuse` package from Homebrew tasks
-2. `docker` formulate removed from Homebrew because `docker` cask is all we need
+2. `docker` formula removed from Homebrew because `docker` cask is all we need
 
 Version 1.1.4
 -------------
