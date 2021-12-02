@@ -5,9 +5,9 @@ This drastically speeds up how long it takes to setup a new Mac for me.
 
 Apple Silicon
 -------------
-Right now this Ansible role is tested against Big Sur on Intel Macs only. In the future it will be tested on Apple Silicon Macs.
+Right now this Ansible role is tested against Monterey on Intel Macs only. In the future it will be tested on Apple Silicon Macs.
 
-Big Sur and MDM
+Monterey and MDM
 ----------------
 This repository is tested against machines enrolled in MDM via DEP with a configuration profile that whitelists system extensions from the
 following vendor IDs:
@@ -25,7 +25,7 @@ Requirements
 ------------
 To configure a machine you must have the following:
 
-1. macOS Big Sur (11.1) or later (This may work on earlier versions, but only the latest is tested)
+1. macOS Monterey (11.1) or later (This may work on earlier versions, but only the latest is tested)
 2. The account you're using must be an Admin
 3. Internet access
 4. [Homebrew](https://brew.sh/) pre-installed

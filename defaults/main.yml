@@ -20,7 +20,6 @@ homebrew_packages:
   - awscli
   - "parera10/csshx/csshx"
   - dc3dd
-  - docker
   - docker-machine
   - docker-machine-driver-vmware
   - doctl

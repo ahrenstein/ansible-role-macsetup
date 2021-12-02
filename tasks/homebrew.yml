@@ -21,12 +21,6 @@
     name: "{{ homebrew_taps }}"
     state: present
 
-- name: (Homebrew) Install osxfuse ahead of packages
-  homebrew_cask:
-    name: osxfuse
-    state: present
-    sudo_password: "{{ ansible_become_pass }}"
-
 - name: (Homebrew) Install my usual Homebrew packages
   homebrew:
     name: "{{ homebrew_packages }}"
@@ -52,5 +46,5 @@
     creates: /tmp/DoesNot.Exist # Hack to deal with stupid ansible linting rule
   with_items:
     - '{{ gatekeeper_list.stdout_lines }}'
-  ignore_errors: yes # Some apps fail to have this applied but it doesn't matter
+  ignore_errors: yes # Some apps fail to have this applied, but it doesn't matter
 
