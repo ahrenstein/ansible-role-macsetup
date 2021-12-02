@@ -2,7 +2,7 @@ Ansible Role - Mac Setup: To Do List
 ====================================
 The versions below are future versions that will be released once those features have been completed.
 
-Version 1.1.5
+Version 1.2.0
 -------------
 
 1. Apple Silicon support
@@ -12,13 +12,13 @@ Version 1.1.5
 4. Trackpad and Magic Mouse settings are not able to be set automatically
    even with the `defaults write` command
 
-Version 1.2.0
+Version 1.3.0
 -------------
 
 1. Keyboard shortcuts (Disable CTRL+arrow keys)
 2. Automate licensing for VMware Fusion
 
-Version 1.3.0
+Version 1.4.0
 -------------
 
 1. Add second language for keyboard and dictionary

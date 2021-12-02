@@ -2,6 +2,12 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.1.5
+-------------
+
+1. Removing `osxfuse` package from Homebrew tasks
+2. `docker` formulate removed from Homebrew because `docker` cask is all we need
+
 Version 1.1.4
 -------------
 
