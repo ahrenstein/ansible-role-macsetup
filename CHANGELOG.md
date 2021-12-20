@@ -2,6 +2,31 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.2.0
+-------------
+
+1. Monterey/Apple Silicon initial support
+2. Deploy Rosetta 2
+3. Removing the following taps/brews/casks
+   1. `parera10/csshx`
+   2. `docker-machine`
+   3. `exiftool`
+   4. `minikube`
+   5. `openssh`
+   6. `profilecreator`
+   7. `wireshark`
+4. `saml2aws-duo` is now just `saml2aws as it's officially supporting Duo on JumpCloud
+5. Moving the following brews to deploy only on Intel (for now)
+   1. `dc3dd`
+   2. `vfuse`
+6. Moving the following casks to deploy only on Intel (for now)
+   1. `vmware-fusion`
+   2. `homebrew/cask-drivers/yubico-yubikey-manager`
+   3. `homebrew/cask-drivers/yubico-yubikey-personalization-gui`
+   4. `vagrant-vmware-utility`
+   5. `vagrant`
+   6. `virtualbox`
+
 Version 1.1.5
 -------------
 

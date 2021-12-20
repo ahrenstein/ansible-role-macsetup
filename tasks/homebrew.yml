@@ -26,11 +26,25 @@
     name: "{{ homebrew_packages }}"
     state: present
 
+- name: (Homrew) Install Intel only Homebrew packages
+  homebrew:
+    name: "{{ intel_brews }}"
+    state: present
+  when: ansible_machine == "x86_64"
+
 - name: (Homebrew) Install my usual Homebrew casks
   homebrew_cask:
     name: "{{ homebrew_casks }}"
     state: present
     sudo_password: "{{ ansible_become_pass }}"
+
+- name: (Homrew) Install Intel only Homebrew casks
+  homebrew_cask:
+    name: "{{ intel_cask }}"
+    state: present
+    sudo_password: "{{ ansible_become_pass }}"
+  when: ansible_machine == "x86_64"
+
 
 - name: Register a list of applications to remove Gatekeeper quarantine from
   shell:

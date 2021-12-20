@@ -13,17 +13,15 @@
 # Variables for Mac Setup
 
 homebrew_taps:
-  - "parera10/csshx"
   - "ahrenstein/homebrew-taps"
+intel_brews:
+  - dc3dd
+  - vfuse
 homebrew_packages:
   - ansible-lint
   - awscli
-  - "parera10/csshx/csshx"
-  - dc3dd
-  - docker-machine
   - docker-machine-driver-vmware
   - doctl
-  - exiftool
   - ffmpeg
   - fzf
   - git
@@ -32,8 +30,6 @@ homebrew_packages:
   - git-lfs
   - gnu-sed
   - kubernetes-cli
-  - minikube
-  - openssh
   - packer
   - pipenv
   - pyenv
@@ -42,17 +38,24 @@ homebrew_packages:
   - readline
   - ripgrep
   - ruby-build
-  - saml2aws-duo
+  - saml2aws
   - telnet
   - terraform
   - thefuck
-  - vfuse
   - watch
   - wget
   - xz
   - ykman
   - youtube-dl
   - zlib
+
+intel_casks:
+  - vmware-fusion
+  - homebrew/cask-drivers/yubico-yubikey-manager
+  - homebrew/cask-drivers/yubico-yubikey-personalization-gui
+  - vagrant-vmware-utility
+  - vagrant
+  - virtualbox
 homebrew_casks:
   - android-platform-tools
   - audio-hijack
@@ -66,18 +69,10 @@ homebrew_casks:
   - handbrake
   - intellij-idea
   - loopback
-  - profilecreator
   - soundsource
   - suspicious-package
-  - vagrant
-  - vagrant-vmware-utility
-  - virtualbox
   - viscosity
   - vlc
-  - vmware-fusion
-  - wireshark
-  - homebrew/cask-drivers/yubico-yubikey-manager
-  - homebrew/cask-drivers/yubico-yubikey-personalization-gui
 full_name: "Matthew Ahrenstein"
 email: "matt@ahrenstein.com"
 gpg_short_id: "92180F60"
