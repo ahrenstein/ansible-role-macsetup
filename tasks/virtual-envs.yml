@@ -14,14 +14,16 @@
 
 - name: (Virtual Environments) Install Ruby 2.7.0
   shell: >
-    RUBY_CFLAGS="-Wno-error=implicit-function-declaration" arch -x86_64 /opt/homebrew/bin/rbenv install 2.7.0
+    RUBY_CFLAGS="-Wno-error=implicit-function-declaration" rbenv install 2.7.0
   args:
     executable: '/bin/zsh'
     creates: "~/.rbenv/versions/2.7.0"
 
 - name: (Virtual Environments) Set Ruby 2.7.0 as the global environment
-  command:
-    cmd: 'rbenv global 2.7.0'
+  shell: >
+    rbenv global 2.7.0
+  args:
+    executable: '/bin/zsh'
     creates: "~/.rbenv/version"
 
 - name: (Virtual Environments) Install Python 3.8.0
