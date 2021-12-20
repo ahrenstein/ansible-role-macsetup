@@ -13,7 +13,8 @@
 # Install Rosetta 2 on Apple Silicon machines
 
 - name: (Rosetta) Install Rosetta 2
+  become: yes
+  become_user: root
   command:
     cmd: 'softwareupdate --install-rosetta --agree-to-license'
-    sudo_password: "{{ ansible_become_pass }}"
     creates: "/Library/Apple/System/Library/Receipts/com.apple.pkg.RosettaUpdateAuto.plist"
