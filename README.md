@@ -5,7 +5,7 @@ This drastically speeds up how long it takes to setup a new Mac for me.
 
 Apple Silicon
 -------------
-Right now this Ansible role is tested against Monterey on Intel Macs only. In the future it will be tested on Apple Silicon Macs.
+Right now this Ansible role is tested against Monterey on **Apple Silicon** Macs only.
 
 Monterey and MDM
 ----------------
@@ -25,7 +25,7 @@ Requirements
 ------------
 To configure a machine you must have the following:
 
-1. macOS Monterey (11.1) or later (This may work on earlier versions, but only the latest is tested)
+1. macOS Monterey (12.1) or later (This may work on earlier versions, but only the latest is tested)
 2. The account you're using must be an Admin
 3. Internet access
 4. [Homebrew](https://brew.sh/) pre-installed
@@ -52,7 +52,9 @@ Changing the following variables is less required but are still very personal in
 
 1. `homebrew_taps` - Change the default taps installed
 2. `homebrew_packages` - Change the default brews that are installed
+   1. `intel_brews` - Will deploy some brews that only work on Intel Macs although this is largely untested.
 3. `homebrew_casks` - Change the default casks that are installed
+   1. `intel_casks` - Will deploy some casks that only work on Intel Macs although this is largely untested.
 4. `licenses` - Change this to `true` to run the licenses tasks (You will also need to populate the below licensing variables)
 
 Licensing variables:
