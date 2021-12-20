@@ -26,12 +26,18 @@
     executable: '/bin/zsh'
     creates: "~/.rbenv/version"
 
-- name: (Virtual Environments) Install Python 3.9.0
+- name: (Virtual Environments) Install Python 3.8.0
   shell: >
-    /opt/homebrew/bin/pyenv install --patch 3.9.0
+    CFLAGS="-I$(brew --prefix openssl)/include -I$(brew --prefix bzip2)/include -I$(brew --prefix readline)/include -I$(xcrun
+    --show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib
+    -L$(brew --prefix zlib)/lib -L$(brew --prefix bzip2)/lib" /opt/homebrew/bin/pyenv install --patch 3.8.0
+    < <(curl -sSL https://github.com/python/cpython/commit/8ea6353.patch\?full_index\=1)
+  environment:
+    LDFLAGS: "-L/opt/homebrew/opt/zlib/lib"
+    CPPFLAGS: "-I/opt/homebrew/opt/zlib/include"
   args:
     executable: '/bin/zsh'
-    creates: "~/.pyenv/versions/3.9.0"
+    creates: "~/.pyenv/versions/3.8.0"
 
 - name: (Virtual Environments) Set Python 3.8.0 as the global environment
   command:
