@@ -16,7 +16,7 @@
   shell: >
     CFLAGS="-Wno-error=implicit-function-declaration"
     RUBY_CONFIGURE_OPTS='--with-readline-dir=/opt/homebrew/opt/readline/'
-    'rbenv install 2.7.0'
+    '/opt/homebrew/bin/rbenv install 2.7.0'
   args:
     executable: '/bin/zsh'
     creates: "~/.rbenv/versions/2.7.0"
