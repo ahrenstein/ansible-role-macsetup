@@ -9,17 +9,16 @@ Right now this Ansible role is tested against Monterey on **Apple Silicon** Macs
 
 Monterey and MDM
 ----------------
-This repository is tested against machines enrolled in MDM via DEP with a configuration profile that whitelists system extensions from the
+This repository is tested against machines enrolled in MDM via DEP with a configuration profile that allowlists system extensions from the
 following vendor IDs:
 
 | Vendor Name  | Team ID         | KEXT IDs                               |
 |--------------|-----------------|----------------------------------------|
 | Oracle       | VB5E2TV963      | (ALL)                                  |
 | VMware       | EG7KH642X6      | (ALL)                                  |
-| Google       | EQHXZ8M8AV      | com.google.drivefs.filesystems.dfsfuse |
 | Rogue Amoeba | 7266XEXAPM      | /Library/Audio/Plug-Ins/HAL/ACE.driver |
 
-If these are not whitelisted ahead of running this role, you may have to approve system extensions as prompts come up. This is due to some of the Homebrew casks that get installed.
+If these are not allowlisted ahead of running this role, you may have to approve system extensions as prompts come up. This is due to some of the Homebrew casks that get installed.
 
 Requirements
 ------------
