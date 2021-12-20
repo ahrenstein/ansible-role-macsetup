@@ -20,11 +20,19 @@
     group: staff
     mode: 0644
 
-- name: (Dot Files) Configure fzf
+- name: (Dot Files) Configure fzf on Intel
   shell: "yes | /usr/local/opt/fzf/install"
   args:
     executable: '/bin/zsh'
     creates: "~/.fzf.zsh"
+  when: ansible_machine == "x86_64"
+
+- name: (Dot Files) Configure fzf on Apple Silicon
+  shell: "yes | /opt/homebrew/opt/fzf/install"
+  args:
+    executable: '/bin/zsh'
+    creates: "~/.fzf.zsh"
+  when: ansible_machine == "arm64"
 
 - name: (Dot Files) Make sure /opt exists
   become: true

@@ -12,6 +12,8 @@
 
 # Configure a fresh Mac with Matthew Ahrenstein's custom settings
 
+- import_tasks: rosetta.yml
+  when: ansible_machine == "arm64"
 - import_tasks: homebrew.yml
 - import_tasks: profile.yml
 - import_tasks: dot-files.yml

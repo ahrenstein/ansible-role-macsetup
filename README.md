@@ -5,27 +5,26 @@ This drastically speeds up how long it takes to setup a new Mac for me.
 
 Apple Silicon
 -------------
-Right now this Ansible role is tested against Monterey on Intel Macs only. In the future it will be tested on Apple Silicon Macs.
+Right now this Ansible role is tested against Monterey on **Apple Silicon** Macs only.
 
 Monterey and MDM
 ----------------
-This repository is tested against machines enrolled in MDM via DEP with a configuration profile that whitelists system extensions from the
+This repository is tested against machines enrolled in MDM via DEP with a configuration profile that allowlists system extensions from the
 following vendor IDs:
 
 | Vendor Name  | Team ID         | KEXT IDs                               |
 |--------------|-----------------|----------------------------------------|
 | Oracle       | VB5E2TV963      | (ALL)                                  |
 | VMware       | EG7KH642X6      | (ALL)                                  |
-| Google       | EQHXZ8M8AV      | com.google.drivefs.filesystems.dfsfuse |
 | Rogue Amoeba | 7266XEXAPM      | /Library/Audio/Plug-Ins/HAL/ACE.driver |
 
-If these are not whitelisted ahead of running this role, you may have to approve system extensions as prompts come up. This is due to some of the Homebrew casks that get installed.
+If these are not allowlisted ahead of running this role, you may have to approve system extensions as prompts come up. This is due to some of the Homebrew casks that get installed.
 
 Requirements
 ------------
 To configure a machine you must have the following:
 
-1. macOS Monterey (11.1) or later (This may work on earlier versions, but only the latest is tested)
+1. macOS Monterey (12.1) or later (This may work on earlier versions, but only the latest is tested)
 2. The account you're using must be an Admin
 3. Internet access
 4. [Homebrew](https://brew.sh/) pre-installed
@@ -52,7 +51,9 @@ Changing the following variables is less required but are still very personal in
 
 1. `homebrew_taps` - Change the default taps installed
 2. `homebrew_packages` - Change the default brews that are installed
+   1. `intel_brews` - Will deploy some brews that only work on Intel Macs although this is largely untested.
 3. `homebrew_casks` - Change the default casks that are installed
+   1. `intel_casks` - Will deploy some casks that only work on Intel Macs although this is largely untested.
 4. `licenses` - Change this to `true` to run the licenses tasks (You will also need to populate the below licensing variables)
 
 Licensing variables:
