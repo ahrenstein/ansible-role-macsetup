@@ -20,7 +20,6 @@ intel_brews:
 homebrew_packages:
   - ansible-lint
   - awscli
-  - docker-machine-driver-vmware
   - doctl
   - ffmpeg
   - fzf

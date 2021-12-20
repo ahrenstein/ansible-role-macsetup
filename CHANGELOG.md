@@ -10,11 +10,12 @@ Version 1.2.0
 3. Removing the following taps/brews/casks
    1. `parera10/csshx`
    2. `docker-machine`
-   3. `exiftool`
-   4. `minikube`
-   5. `openssh`
-   6. `profilecreator`
-   7. `wireshark`
+   3. `docker-machine-driver-vmware`
+   4. `exiftool`
+   5. `minikube`
+   6. `openssh`
+   7. `profilecreator`
+   8. `wireshark`
 4. `saml2aws-duo` is now just `saml2aws as it's officially supporting Duo on JumpCloud
 5. Moving the following brews to deploy only on Intel (for now)
    1. `dc3dd`
