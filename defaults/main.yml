@@ -54,9 +54,6 @@ intel_casks:
   - vmware-fusion
   - homebrew/cask-drivers/yubico-yubikey-manager
   - homebrew/cask-drivers/yubico-yubikey-personalization-gui
-  - vagrant-vmware-utility
-  - vagrant
-  - virtualbox
 homebrew_casks:
   - android-platform-tools
   - audio-hijack

@@ -2,6 +2,12 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.2.2
+-------------
+
+1. Python version bumped to 3.9.10
+2. Removing Vagrant and Virtualbox
+
 Version 1.2.1
 -------------
 

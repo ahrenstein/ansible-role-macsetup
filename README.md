@@ -18,7 +18,8 @@ following vendor IDs:
 | VMware       | EG7KH642X6      | (ALL)                                  |
 | Rogue Amoeba | 7266XEXAPM      | /Library/Audio/Plug-Ins/HAL/ACE.driver |
 
-If these are not allowlisted ahead of running this role, you may have to approve system extensions as prompts come up. This is due to some of the Homebrew casks that get installed.
+If these are not allowlisted ahead of running this role, you may have to approve system extensions as prompts come up. This is due to some of the Homebrew casks that get installed.  
+Additionally, on Apple Silicon computers you must [enable Reduced Security ahead of running this to allow the Rogue Amoeba apps to install](https://rogueamoeba.com/support/knowledgebase/?showArticle=ACE-StepByStep).
 
 Requirements
 ------------
