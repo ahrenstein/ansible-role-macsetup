@@ -2,6 +2,11 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.2.1
+-------------
+
+1. Removing deprecated Vagrant boxes repo
+
 Version 1.2.0
 -------------
 

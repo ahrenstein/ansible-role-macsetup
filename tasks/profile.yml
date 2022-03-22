@@ -35,19 +35,3 @@
     owner: "{{ ansible_user_id }}"
     group: staff
     mode: 0700
-
-- name: (Profile) Create Vagrant directory
-  file:
-    path: "~/Vagrant"
-    state: directory
-    owner: "{{ ansible_user_id }}"
-    group: staff
-    mode: 0700
-
-- name: (Profile) Checkout the VagrantBoxes repo from git
-  git:
-    repo: https://github.com/route1337/VagrantBoxes.git
-    dest: "~/Vagrant"
-    force: yes
-    depth: 1
-    version: main
