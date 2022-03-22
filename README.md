@@ -14,7 +14,6 @@ following vendor IDs:
 
 | Vendor Name  | Team ID         | KEXT IDs                               |
 |--------------|-----------------|----------------------------------------|
-| Oracle       | VB5E2TV963      | (ALL)                                  |
 | VMware       | EG7KH642X6      | (ALL)                                  |
 | Rogue Amoeba | 7266XEXAPM      | /Library/Audio/Plug-Ins/HAL/ACE.driver |
 
