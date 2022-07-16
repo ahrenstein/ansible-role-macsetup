@@ -12,16 +12,16 @@
 
 # Configure virtual environments for development
 
-- name: (Virtual Environments) Install Ruby 2.7.0
+- name: (Virtual Environments) Install Ruby 3.1.2
   shell: >
-    RUBY_CFLAGS="-Wno-error=implicit-function-declaration" rbenv install 2.7.0
+    RUBY_CFLAGS="-Wno-error=implicit-function-declaration" rbenv install 3.1.2
   args:
     executable: '/bin/zsh'
-    creates: "~/.rbenv/versions/2.7.0"
+    creates: "~/.rbenv/versions/3.1.2"
 
-- name: (Virtual Environments) Set Ruby 2.7.0 as the global environment
+- name: (Virtual Environments) Set Ruby 3.1.2 as the global environment
   shell: >
-    rbenv global 2.7.0
+    rbenv global 3.1.2
   args:
     executable: '/bin/zsh'
     creates: "~/.rbenv/version"
