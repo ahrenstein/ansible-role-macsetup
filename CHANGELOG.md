@@ -2,6 +2,12 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.2.4
+-------------
+
+1. Ruby version bumped to 3.2.2
+2. Ignore errors on Ruby commands
+
 Version 1.2.3
 -------------
 
