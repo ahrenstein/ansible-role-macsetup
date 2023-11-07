@@ -14,12 +14,11 @@
 
 homebrew_taps:
   - "ahrenstein/homebrew-taps"
-intel_brews:
-  - dc3dd
-  - vfuse
+  - "hashicorp/tap"
 homebrew_packages:
   - ansible-lint
   - awscli
+  - azure-cli
   - doctl
   - ffmpeg
   - fzf
@@ -30,8 +29,9 @@ homebrew_packages:
   - gnu-sed
   - kubernetes-cli
   - openssl
-  - packer
+  - "hashicorp/tap/packer"
   - pipenv
+  - pre-commit
   - poetry
   - pyenv
   - qemu
@@ -41,20 +41,17 @@ homebrew_packages:
   - ruby-build
   - saml2aws
   - telnet
-  - terraform
+  - "hashicorp/tap/terraform"
   - thefuck
   - watch
   - wget
   - xz
   - ykman
-  - youtube-dl
+  - yt-dlp
   - zlib
 
-intel_casks:
-  - vmware-fusion
-  - homebrew/cask-drivers/yubico-yubikey-manager
-  - homebrew/cask-drivers/yubico-yubikey-personalization-gui
 homebrew_casks:
+  - 1password
   - android-platform-tools
   - audio-hijack
   - commandq

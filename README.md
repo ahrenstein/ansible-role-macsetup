@@ -1,11 +1,11 @@
 Ansible Role - Mac Setup
 ==========================
-This repo contains an Ansible role that configures Matthew Ahrenstein's personal preferences and settings on a new out of the box Mac.  
+This repo contains an Ansible role that configures Matthew Ahrenstein's personal preferences and settings on a new out-of-the-box Mac.  
 This drastically speeds up how long it takes to setup a new Mac for me.
 
 Apple Silicon
 -------------
-Right now this Ansible role is tested against Monterey on **Apple Silicon** Macs only.
+Right now this Ansible role is tested against Sonoma on **Apple Silicon** Macs only.
 
 Monterey and MDM
 ----------------
@@ -24,7 +24,7 @@ Requirements
 ------------
 To configure a machine you must have the following:
 
-1. macOS Monterey (12.1) or later (This may work on earlier versions, but only the latest is tested)
+1. macOS Monterey (14.0) or later (This may work on earlier versions, but only the latest is tested)
 2. The account you're using must be an Admin
 3. Internet access
 4. [Homebrew](https://brew.sh/) pre-installed

@@ -2,6 +2,18 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.3.0
+-------------
+1. Tapping `hashicorp/tap`
+2. `packer` is now part of the Hashicorp tap
+3. `terraform` is now part of the Hashicorp tap
+4. `1password` added as a default cask
+5. Python version bumped to 3.11.0
+6. Sonoma is now the minimum version
+7. Strip out some remaining Intel code
+8. Adding `azure-cli` and `pre-commit`
+9. Replacing `youtube-dl` with `yt-dlp` 
+
 Version 1.2.4
 -------------
 
