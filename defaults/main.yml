@@ -17,6 +17,7 @@ homebrew_taps:
   - "hashicorp/tap"
 homebrew_packages:
   - ansible-lint
+  - argocd
   - awscli
   - azure-cli
   - doctl
@@ -27,9 +28,12 @@ homebrew_packages:
   - git-flow
   - git-lfs
   - gnu-sed
+  - go
+  - helm
+  - jq
+  - kubectx
   - kubernetes-cli
   - openssl
-  - "hashicorp/tap/packer"
   - pipenv
   - pre-commit
   - poetry
@@ -45,8 +49,8 @@ homebrew_packages:
   - thefuck
   - watch
   - wget
-  - xz
   - ykman
+  - yq
   - yt-dlp
   - zlib
 
@@ -66,6 +70,7 @@ homebrew_casks:
   - loopback
   - soundsource
   - suspicious-package
+  - utm
   - viscosity
   - vlc
 full_name: "Matthew Ahrenstein"

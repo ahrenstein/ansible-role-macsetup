@@ -12,30 +12,18 @@
 
 # Configure virtual environments for development
 
-- name: (Virtual Environments) Install Ruby 3.2.2
+- name: (Virtual Environments) Install Ruby 3.3.0
   shell: >
-    rbenv install 3.2.2
+    rbenv install 3.3.0
   args:
     executable: '/bin/zsh'
-    creates: "~/.rbenv/versions/3.2.2"
+    creates: "~/.rbenv/versions/3.3.0"
   ignore_errors: true
 
-- name: (Virtual Environments) Set Ruby 3.2.2 as the global environment
+- name: (Virtual Environments) Set Ruby 3.3.0 as the global environment
   shell: >
-    rbenv global 3.2.2
+    rbenv global 3.3.0
   args:
     executable: '/bin/zsh'
     creates: "~/.rbenv/version"
   ignore_errors: true
-
-- name: (Virtual Environments) Install Python 3.11.0
-  shell: >
-    /opt/homebrew/bin/pyenv install 3.11.0
-  args:
-    executable: '/bin/zsh'
-    creates: "~/.pyenv/versions/3.11.0"
-
-- name: (Virtual Environments) Set Python 3.11.0 as the global environment
-  command:
-    cmd: 'pyenv global 3.11.0'
-    creates: "~/.pyenv/version"
