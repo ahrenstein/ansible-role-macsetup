@@ -20,7 +20,7 @@ galaxy_info:
   platforms:
     - name: MacOSX
       versions:
-        - 11.0
+        - 14.0
   galaxy_tags:
     - macos
     - devops

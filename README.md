@@ -51,9 +51,7 @@ Changing the following variables is less required but are still very personal in
 
 1. `homebrew_taps` - Change the default taps installed
 2. `homebrew_packages` - Change the default brews that are installed
-   1. `intel_brews` - Will deploy some brews that only work on Intel Macs although this is largely untested.
 3. `homebrew_casks` - Change the default casks that are installed
-   1. `intel_casks` - Will deploy some casks that only work on Intel Macs although this is largely untested.
 4. `licenses` - Change this to `true` to run the licenses tasks (You will also need to populate the below licensing variables)
 
 Licensing variables:
