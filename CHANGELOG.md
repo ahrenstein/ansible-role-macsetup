@@ -2,7 +2,7 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
-Version 1.4.1
+Version 1.4.0
 -------------
 1. Remove the following Homebrew formula
    1. packer
@@ -15,12 +15,9 @@ Version 1.4.1
    5. kubectx
    6. yq
 3. Add the `utm` Homebrew cask
-
-Version 1.4.0
--------------
-1. No longer using a virtual Python environment. Poetry is now favored.
-2. Ruby version bumped to 3.3.0
-3. Readme fixed
+4. No longer using a virtual Python environment. Poetry is now favored.
+5. Ruby version bumped to 3.3.0
+6. Readme fixed
 
 Version 1.3.0
 -------------
