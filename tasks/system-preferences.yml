@@ -199,3 +199,19 @@
     state: present
     key: allowApplePersonalizedAdvertising
     value: 0
+
+- name: (System Preferences) Click wallpaper to reveal desktop only in Stage Manager
+  osx_defaults:
+    domain: com.apple.WindowManager
+    type: bool
+    state: present
+    key: EnableStandardClickToShowDesktop
+    value: false
+
+- name: (System Preferences) Disable margins on tiled windows
+  osx_defaults:
+    domain: com.apple.WindowManager
+    type: bool
+    state: present
+    key: EnableTiledWindowMargins
+    value: false

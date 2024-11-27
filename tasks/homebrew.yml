@@ -30,6 +30,7 @@
   homebrew_cask:
     name: "{{ homebrew_casks }}"
     state: present
+    accept_external_apps: yes
     sudo_password: "{{ ansible_become_pass }}"
 
 - name: Register a list of applications to remove Gatekeeper quarantine from
