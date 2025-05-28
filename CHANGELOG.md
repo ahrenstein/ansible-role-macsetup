@@ -2,8 +2,15 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.4.1
+-------------
+
+1. Remove `poetry` because the latest version does not work well as a brew package
+2. Adjust gitconfig template to add `autoSetupRemote = true` as a convenience
+
 Version 1.4.0
 -------------
+
 1. Remove the following Homebrew formula
    1. packer
    2. xz
@@ -12,7 +19,7 @@ Version 1.4.0
    2. go
    3. helm
    4. jq
-   5. kubectx
+   5. kubectl
    6. yq
 3. Add the `utm` Homebrew cask
 4. No longer using a virtual Python environment. Poetry is now favored.
@@ -21,6 +28,7 @@ Version 1.4.0
 
 Version 1.3.0
 -------------
+
 1. Tapping `hashicorp/tap`
 2. `packer` is now part of the Hashicorp tap
 3. `terraform` is now part of the Hashicorp tap
