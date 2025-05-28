@@ -2,11 +2,19 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
-Version 1.4.1
+Version 1.4.2
 -------------
 
 1. Remove `poetry` because the latest version does not work well as a brew package
 2. Adjust gitconfig template to add `autoSetupRemote = true` as a convenience
+
+Version 1.4.1
+-------------
+
+1. Allow Homebrew casks to install even if existing applications match (Handles MDM-based deployments)
+2. `suspicious-package` no longer added as a default cask
+3. Disable clicking the desktop to reveal wallpaper
+4. Disable tiled window margins
 
 Version 1.4.0
 -------------

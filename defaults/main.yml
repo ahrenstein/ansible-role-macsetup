@@ -68,7 +68,6 @@ homebrew_casks:
   - intellij-idea
   - loopback
   - soundsource
-  - suspicious-package
   - utm
   - viscosity
   - vlc
