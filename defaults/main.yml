@@ -36,7 +36,6 @@ homebrew_packages:
   - openssl
   - pipenv
   - pre-commit
-  - poetry
   - pyenv
   - qemu
   - rbenv
