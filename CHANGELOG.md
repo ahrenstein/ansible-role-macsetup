@@ -2,6 +2,13 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.4.3
+-------------
+
+1. Change the metadata to support macOS `all` as a version since Ansible is routinely behind on adding the latest to metadata.
+   1. NOTE: This role still mostly targets only the current major release
+2. TODO
+
 Version 1.4.2
 -------------
 
