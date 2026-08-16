@@ -24,7 +24,7 @@ Requirements
 ------------
 To configure a machine you must have the following:
 
-1. macOS Monterey (14.0) or later (This may work on earlier versions, but only the latest is tested)
+1. macOS Sequoia (15.0) or later (This may work on earlier versions, but only the latest is tested)
 2. The account you're using must be an Admin
 3. Internet access
 4. [Homebrew](https://brew.sh/) pre-installed
@@ -34,7 +34,7 @@ Limitations
 ------------
 
 1. This role is not meant to be run against remote machines
-2. This role will prompt for the logged in user's password in order to use sudo for the Homebrew steps
+2. This role will prompt for the logged-in user's password in order to use sudo for the Homebrew steps
 3. **Logging out after the role completes is recommended as some settings don't apply until a new login occurs**
 
 Variables
