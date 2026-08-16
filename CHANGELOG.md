@@ -7,7 +7,9 @@ Version 1.4.2
 
 1. Change the metadata to support macOS `all` as a version since Ansible is routinely behind on adding the latest to metadata.
    1. NOTE: This role still mostly targets only the current major release
-2. TODO
+2. Update Audio Hijack license file location
+3. Trust brew taps using the new trust mechanism
+4. No longer deploying a virtual Ruby environment
 
 Version 1.4.1
 -------------

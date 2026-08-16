@@ -27,4 +27,3 @@
 - import_tasks: menu-bar.yml
 - import_tasks: licenses.yml
   when: licenses is true
-- import_tasks: virtual-envs.yml
