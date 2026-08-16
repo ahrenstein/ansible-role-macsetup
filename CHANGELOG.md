@@ -2,6 +2,16 @@ Ansible Role - Mac Setup: Changelog
 =====================================
 A list of all the changes made to this repo, and the role it contains
 
+Version 1.4.3
+-------------
+
+1. Change the metadata to support macOS `all` as a version since Ansible is routinely behind on adding the latest to metadata.
+   1. NOTE: This role still mostly targets only the current major release
+2. Update Audio Hijack license file location
+3. Trust brew taps using the new trust mechanism
+4. No longer deploying a virtual Ruby environment
+5. `intellij-idea` is not longer installed as a Cask due to how their licensing works
+
 Version 1.4.2
 -------------
 

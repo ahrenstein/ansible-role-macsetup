@@ -21,6 +21,18 @@
     name: "{{ homebrew_taps }}"
     state: present
 
+- name: Get a list of currently trusted taps and items
+  ansible.builtin.command:
+    cmd: brew trust
+  register: trusted_taps
+  changed_when: false
+
+- name: Trust my usual custom taps
+  ansible.builtin.command:
+    cmd: "brew trust {{ item }}"
+  loop: "{{ homebrew_taps }}"
+  when: item not in trusted_taps.stdout
+
 - name: (Homebrew) Install my usual Homebrew packages
   homebrew:
     name: "{{ homebrew_packages }}"

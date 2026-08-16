@@ -19,8 +19,8 @@
 
 - name: (Licensing) License Rogue Amoeba's Audio Hijack
   command:
-    cmd: 'defaults write com.rogueamoeba.audiohijack3 registrationInfo -dict-add Code "{{ audiohijack_license }}" Name "{{ audiohijack_name }}"'
-    creates: "~/Library/Preferences/com.rogueamoeba.audiohijack3.plist" # This is a bit of a hack to get around a dumb ansible-lint rule
+    cmd: 'defaults write com.rogueamoeba.audiohijack registrationInfo -dict-add Code "{{ audiohijack_license }}" Name "{{ audiohijack_name }}"'
+    creates: "~/Library/Preferences/com.rogueamoeba.audiohijack.plist" # This is a bit of a hack to get around a dumb ansible-lint rule
 
 - name: (Licensing) License Rogue Amoeba's SoundSource
   command:
