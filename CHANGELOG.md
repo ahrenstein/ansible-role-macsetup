@@ -10,6 +10,7 @@ Version 1.4.3
 2. Update Audio Hijack license file location
 3. Trust brew taps using the new trust mechanism
 4. No longer deploying a virtual Ruby environment
+5. `intellij-idea` is not longer installed as a Cask due to how their licensing works
 
 Version 1.4.2
 -------------

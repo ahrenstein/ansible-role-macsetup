@@ -19,16 +19,13 @@
     - name: full_name
       prompt: "What's your full name?"
       private: no
-      register: full_name
     - name: email
       prompt: "What's your email address?"
       private: no
       unsafe: yes
-      register: email
     - name: gpg_short_id
       prompt: "What's your GPG key's short ID?"
       private: no
-      register: gpg_short_id
   connection: local
   roles:
     - ./
